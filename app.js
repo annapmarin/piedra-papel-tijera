@@ -52,10 +52,10 @@ function juego(opcionUsuario) {
             case EMPATE:
                 textoResultado.innerHTML = "¡Empate!";
                 break;
-            case GANAS:
+            case PIERDES:
                 textoResultado.innerHTML = '¡Has ganado!';
                 break;
-            case PIERDES:
+            case GANAS:
                 textoResultado.innerHTML = 'Has perdido :(';
                 break;
         }
@@ -81,6 +81,7 @@ function calcOpcionOrdenador() {
 function calcResultado(opcionUsuario, opcionOrdenador) {
         if(opcionUsuario === opcionOrdenador) {
             return EMPATE;
+
         } else if (opcionUsuario === PIEDRA) {
     
             if(opcionOrdenador === PAPEL) return PIERDES;
